@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, Clock, MapPin, Phone } from "lucide-react"
+import Link from "next/link"
 
 export function BookingCTA() {
   return (
@@ -19,18 +20,22 @@ export function BookingCTA() {
                   leaves you feeling refreshed and radiant.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" variant="secondary" className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5" />
-                    Book Online Now
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="flex items-center gap-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
-                  >
-                    <Phone className="h-5 w-5" />
-                    Call (555) 123-4567
-                  </Button>
+                  <Link href="/book">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="flex items-center gap-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                    >
+                      <Calendar className="h-5 w-5" />
+                      Book Online Now
+                    </Button>
+                  </Link>
+                  <Link href="tel:+15551234567">
+                    <Button className="flex items-center gap-2">
+                      <Phone className="h-5 w-5" />
+                      Call (555) 123-4567
+                    </Button>
+                  </Link>
                 </div>
               </div>
 

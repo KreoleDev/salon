@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Calendar, Star, Award, Users } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -21,13 +22,17 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="flex items-center gap-2 text-base px-8 py-6">
-                <Calendar className="h-5 w-5" />
-                Book Your Experience
-              </Button>
-              <Button variant="outline" size="lg" className="text-base px-8 py-6 bg-transparent">
-                Explore Services
-              </Button>
+              <Link href="/book">
+                <Button size="lg" className="flex items-center gap-2 text-base px-8 py-6">
+                  <Calendar className="h-5 w-5" />
+                  Book Your Experience
+                </Button>
+              </Link>
+              <Link href="/services">
+                <Button variant="outline" size="lg" className="text-base px-8 py-6 bg-transparent">
+                  Explore Services
+                </Button>
+              </Link>
             </div>
 
             {/* Stats */}

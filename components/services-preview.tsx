@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Scissors, Sparkles, Heart, Palette, Clock, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const services = [
   {
@@ -85,10 +86,12 @@ export function ServicesPreview() {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="flex items-center gap-2 mx-auto bg-transparent">
-            View All Services
-            <ArrowRight className="h-4 w-4" />
-          </Button>
+          <Link href="/services">
+            <Button size="lg" variant="outline" className="flex items-center gap-2 mx-auto bg-transparent">
+              View All Services
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
