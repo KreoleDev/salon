@@ -40,12 +40,7 @@ export function Header() {
             >
               Gallery
             </Link>
-            <Link
-              href="/contact"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contact
-            </Link>
+            
           </nav>
 
           {/* Desktop CTA */}
